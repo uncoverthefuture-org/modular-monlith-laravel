@@ -1,0 +1,21 @@
+<?php
+
+namespace {{namespace}};
+
+use {{baseController}};
+use {{modelNamespace}}\{{modelName}};
+use {{validationNamespace}}\{{validationName}};
+use Illuminate\Http\Request;
+
+class {{name}}Controller extends {{baseControllerName}}
+{
+    /**
+     * The model class this controller manages.
+     */
+    protected static string $model = {{modelName}}::class;
+
+    /**
+     * The validation class this controller uses.
+     */
+    protected static string $validation = {{validationName}}::class;
+}

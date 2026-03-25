@@ -1,0 +1,73 @@
+<?php
+
+namespace {{namespace}};
+
+use {{baseMiddleware}};
+use Illuminate\Http\Request;
+
+class {{name}}Middleware extends {{baseMiddlewareName}}
+{
+    /**
+     * Map of actions to their corresponding authorization methods.
+     * Uncomment and customize as needed.
+     */
+    // protected array $actionMethodMap = [
+    //     'create' => 'authorizeCreate',
+    //     'read' => 'authorizeRead',
+    //     'update' => 'authorizeUpdate',
+    //     'delete' => 'authorizeDelete',
+    //     'query' => 'authorizeQuery',
+    // ];
+
+    /**
+     * Authorize creating a new record.
+     */
+    // protected function authorizeCreate(Request $request): bool
+    // {
+    //     return auth()->user()?->can('{{nameLower}}.create');
+    // }
+
+    /**
+     * Authorize reading a record.
+     */
+    // protected function authorizeRead(Request $request): bool
+    // {
+    //     return auth()->user()?->can('{{nameLower}}.read');
+    // }
+
+    /**
+     * Authorize updating a record.
+     */
+    // protected function authorizeUpdate(Request $request): bool
+    // {
+    //     return auth()->user()?->can('{{nameLower}}.update');
+    // }
+
+    /**
+     * Authorize deleting a record.
+     */
+    // protected function authorizeDelete(Request $request): bool
+    // {
+    //     return auth()->user()?->can('{{nameLower}}.delete');
+    // }
+
+    /**
+     * Authorize querying records.
+     */
+    // protected function authorizeQuery(Request $request): bool
+    // {
+    //     return auth()->user()?->can('{{nameLower}}.query');
+    // }
+
+    /**
+     * Deny access response.
+     * Customize this for your needs.
+     */
+    // protected function denyAccess(): Response
+    // {
+    //     return response()->json([
+    //         'status' => 'error',
+    //         'message' => 'You do not have permission to perform this action.',
+    //     ], 403);
+    // }
+}

@@ -1,0 +1,82 @@
+name: Tests
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        php: ['8.1', '8.2', '8.3']
+        laravel: ['9.*', '10.*', '11.*']
+        exclude:
+          - php: '8.1'
+            laravel: '11.*'
+          - php: '8.3'
+            laravel: '9.*'
+
+    name: PHP ${{ matrix.php }} - Laravel ${{ matrix.laravel }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/cache-extensions@v1
+        with:
+          php-version: ${{ matrix.php }}
+
+      - name: Install PHP dependencies
+        run: |
+          composer install --no-interaction --prefer-dist
+
+      - name: Run tests
+        run: ./vendor/bin/pest --colors=always
+
+  phpcs:
+    runs-on: ubuntu-latest
+    
+    name: Code Style
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/cache-extensions@v1
+        with:
+          php-version: '8.2'
+
+      - name: Install PHP dependencies
+        run: composer install --no-interaction --prefer-dist
+
+      - name: Run PHPCS
+        run: ./vendor/bin/php-cs-fixer fix --diff --dry-run --stop-on-violation
+
+  phpstan:
+    runs-on: ubuntu-latest
+    
+    name: Static Analysis
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/cache-extensions@v1
+        with:
+          php-version: '8.2'
+
+      - name: Install PHP dependencies
+        run: composer install --no-interaction --prefer-dist
+
+      - name: Run PHPStan
+        run: ./vendor/bin/phpstan analyse --memory-limit=512M

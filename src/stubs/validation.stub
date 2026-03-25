@@ -1,0 +1,69 @@
+<?php
+
+namespace {{namespace}};
+
+use {{baseValidation}};
+use Illuminate\Http\Request;
+
+class {{name}}Validation extends {{baseValidationName}}
+{
+    /**
+     * Rules for creating a record.
+     * Override these with your specific validation rules.
+     */
+    protected static function createRules(Request $request): array
+    {
+        return [
+            // Add validation rules here
+            // 'name' => ['required', 'string', 'max:255'],
+            // 'email' => ['required', 'email', 'unique:{{table}}'],
+        ];
+    }
+
+    /**
+     * Rules for reading a record.
+     */
+    protected static function readRules(Request $request): array
+    {
+        return [
+            'id' => ['required', 'string', 'uuid'],
+        ];
+    }
+
+    /**
+     * Rules for updating a record.
+     */
+    protected static function updateRules(Request $request): array
+    {
+        return [
+            // 'name' => ['sometimes', 'string', 'max:255'],
+            // 'email' => ['sometimes', 'email', 'unique:{{table}},email,' . $request->input('id') . ',uuid'],
+        ];
+    }
+
+    /**
+     * Rules for deleting records.
+     */
+    protected static function deleteRules(Request $request): array
+    {
+        return [
+            // Add specific rules if needed
+        ];
+    }
+
+    /**
+     * Rules for querying records.
+     */
+    protected static function queryRules(Request $request): array
+    {
+        return [
+            'per_page' => ['sometimes', 'integer', 'min:1', 'max:100'],
+            'sort_by' => ['sometimes', 'string'],
+            'sort_order' => ['sometimes', 'string', 'in:asc,desc'],
+            'filter' => ['sometimes', 'array'],
+            'search' => ['sometimes', 'string'],
+            'search_fields' => ['sometimes', 'string'],
+            'include' => ['sometimes', 'string'],
+        ];
+    }
+}

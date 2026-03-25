@@ -1,0 +1,48 @@
+<?php
+
+namespace {{namespace}};
+
+use {{baseService}};
+
+class {{name}}Service extends {{baseServiceName}}
+{
+    /**
+     * The model class this service manages.
+     */
+    protected static string $model = {{modelName}}::class;
+
+    /**
+     * Cache duration in seconds (null = no cache).
+     * Set to a value > 0 to enable caching.
+     */
+    // protected static ?int $cacheDuration = 3600; // 1 hour
+
+    /**
+     * Cache tag for this service.
+     */
+    // protected static ?string $cacheTag = '{{nameLower}}';
+
+    /**
+     * Apply custom filters to query.
+     */
+    // protected static function applyFilters($query, array $filters)
+    // {
+    //     // Add custom filtering logic
+    //     
+    //     return parent::applyFilters($query, $filters);
+    // }
+
+    /**
+     * Custom business logic methods go here.
+     */
+    
+    // public static function findByEmail(string $email): ?{{modelName}}
+    // {
+    //     return static::getModel()::where('email', $email)->first();
+    // }
+
+    // public static function activate(string $uuid): bool
+    // {
+    //     return static::update($uuid, ['status' => 'active']) !== null;
+    // }
+}

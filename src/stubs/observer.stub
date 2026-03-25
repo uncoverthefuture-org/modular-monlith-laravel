@@ -1,0 +1,78 @@
+<?php
+
+namespace {{namespace}};
+
+use {{baseObserver}};
+use {{modelNamespace}}\{{modelName}};
+
+class {{name}}Observer extends {{baseObserverName}}
+{
+    /**
+     * Get the model class this observer watches.
+     */
+    public static function getObservedModel(): string
+    {
+        return {{modelName}}::class;
+    }
+
+    /**
+     * Handle the model "creating" event.
+     */
+    // public function creating({{modelName}} ${{modelNameLower}}): void
+    // {
+    //     // Logic before creating
+    // }
+
+    /**
+     * Handle the model "created" event.
+     */
+    // public function created({{modelName}} ${{modelNameLower}}): void
+    // {
+    //     // Logic after creating
+    //     // Example: dispatch job, send notification
+    // }
+
+    /**
+     * Handle the model "updating" event.
+     */
+    // public function updating({{modelName}} ${{modelNameLower}}): void
+    // {
+    //     // Logic before updating
+    //     // Check for specific changes
+    //     // if ($this->hasChanged(${{modelNameLower}}, 'status')) {
+    //     //     // Handle status change
+    //     // }
+    // }
+
+    /**
+     * Handle the model "updated" event.
+     */
+    // public function updated({{modelName}} ${{modelNameLower}}): void
+    // {
+    //     // Logic after updating
+    // }
+
+    /**
+     * Handle the model "deleting" event.
+     */
+    // public function deleting({{modelName}} ${{modelNameLower}}): void
+    // {
+    //     // Logic before deleting
+    // }
+
+    /**
+     * Handle the model "deleted" event.
+     */
+    // public function deleted({{modelName}} ${{modelNameLower}}): void
+    // {
+    //     // Logic after deleting
+    // }
+
+    /**
+     * Clear related caches.
+     */
+    // protected function clearRelatedCaches({{modelName}} ${{modelNameLower}}): void
+    // {
+    //     // Clear specific caches
+    // }
+}

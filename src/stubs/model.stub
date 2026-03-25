@@ -1,0 +1,35 @@
+<?php
+
+namespace {{namespace}};
+
+use {{baseModel}};
+
+class {{name}} extends {{baseModelName}}
+{
+    /**
+     * The table associated with the model.
+     */
+    protected $table = '{{table}}';
+
+    /**
+     * The attributes that are mass assignable.
+     */
+    protected $fillable = [
+        {{fillable}},
+        // Add your fillable attributes here
+    ];
+
+    /**
+     * The attributes that should be hidden for serialization.
+     */
+    protected $hidden = [
+        // Add hidden attributes here
+    ];
+
+    /**
+     * The attributes that should be cast.
+     */
+    protected $casts = [
+        // Add cast attributes here
+    ];
+}
