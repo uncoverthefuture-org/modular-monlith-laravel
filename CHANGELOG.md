@@ -5,6 +5,14 @@ All notable changes to this package will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.2](https://github.com/uncoverthefuture-org/modular-monlith-laravel/compare/v1.1.1...v1.1.2) (2026-03-26)
+
+
+### Bug Fixes
+
+* use shell variable syntax for Packagist credentials ([d35c723](https://github.com/uncoverthefuture-org/modular-monlith-laravel/commit/d35c723c3a11f77e555823a590fb51f5ee2fe354))
+* use shell variable syntax for Packagist credentials ([5a8d6b4](https://github.com/uncoverthefuture-org/modular-monlith-laravel/commit/5a8d6b48a81dd8396eb5ffd420657a9124486f3f))
+
 ## [1.1.1](https://github.com/uncoverthefuture-org/modular-monlith-laravel/compare/v1.1.0...v1.1.1) (2026-03-26)
 
 
