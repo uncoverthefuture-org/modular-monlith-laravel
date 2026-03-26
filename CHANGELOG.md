@@ -5,6 +5,23 @@ All notable changes to this package will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0](https://github.com/uncoverthefuture-org/modular-monlith-laravel/compare/v1.0.0...v1.1.0) (2026-03-26)
+
+
+### Features
+
+* add Packagist update workflow ([e42c767](https://github.com/uncoverthefuture-org/modular-monlith-laravel/commit/e42c7678aa90cdf4a0a182f78c234442dff0b571))
+* add Packagist workflow and GitHub files ([7be50bf](https://github.com/uncoverthefuture-org/modular-monlith-laravel/commit/7be50bfcf0e33bed3d1bb688c6a5b5bf4cd4ad9e))
+* add Packagist workflow and GitHub files ([859c608](https://github.com/uncoverthefuture-org/modular-monlith-laravel/commit/859c60861b788d216e7e13a242e42d2c648dd6d2))
+
+
+### Bug Fixes
+
+* correct Infisical secrets-action workflow parameters ([1fedde6](https://github.com/uncoverthefuture-org/modular-monlith-laravel/commit/1fedde6b1de4495b4159d9087c8020c5fbfa90aa))
+* update Infisical workflow with required params ([00c6c94](https://github.com/uncoverthefuture-org/modular-monlith-laravel/commit/00c6c94de493388945d3cf1549d543de162c97ad))
+* update Packagist workflow to include environment variables ([7a7ac89](https://github.com/uncoverthefuture-org/modular-monlith-laravel/commit/7a7ac898c719081f03cb7ba840d3606e8c2bc176))
+* use specific version v1.0.15 for Infisical action ([f5d7393](https://github.com/uncoverthefuture-org/modular-monlith-laravel/commit/f5d739304c9a1e297b776ae6eb96ab3105b9b7a1))
+
 ## 1.0.0 (2026-03-26)
 
 
