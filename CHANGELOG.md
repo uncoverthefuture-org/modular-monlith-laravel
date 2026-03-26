@@ -5,6 +5,15 @@ All notable changes to this package will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.1](https://github.com/uncoverthefuture-org/modular-monlith-laravel/compare/v1.1.0...v1.1.1) (2026-03-26)
+
+
+### Bug Fixes
+
+* add workflow_dispatch and fetch all secrets from Infisical ([7fe5822](https://github.com/uncoverthefuture-org/modular-monlith-laravel/commit/7fe5822d19847288c7e17f241fdf1cd3962d34a9))
+* update Packagist workflow to trigger on release-please PR merge ([71097b9](https://github.com/uncoverthefuture-org/modular-monlith-laravel/commit/71097b9396bd70278c0ea4b3f0c56cc2d6696d1f))
+* use JSON body format and trigger on PR merge ([153cdcc](https://github.com/uncoverthefuture-org/modular-monlith-laravel/commit/153cdccbb74c6d473a33ac0fe6e26f9f9eb7b0d1))
+
 ## [1.1.0](https://github.com/uncoverthefuture-org/modular-monlith-laravel/compare/v1.0.0...v1.1.0) (2026-03-26)
 
 
