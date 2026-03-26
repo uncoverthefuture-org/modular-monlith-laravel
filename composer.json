@@ -21,7 +21,7 @@
         "phpunit/phpunit": "^10.0",
         "pestphp/pest": "^2.0",
         "pestphp/pest-plugin-laravel": "^2.0",
-        "php-cs-fixer/php-cs-fixer": "^3.0",
+        "friendsofphp/php-cs-fixer": "^3.0",
         "phpstan/phpstan": "^1.0"
     },
     "autoload": {
@@ -48,7 +48,7 @@
         "cs:check": "vendor/bin/php-cs-fixer fix --diff --dry-run --stop-on-violation",
         "stan": "vendor/bin/phpstan analyse --memory-limit=512M"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
         "sort-packages": true,
