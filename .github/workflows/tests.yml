@@ -7,6 +7,11 @@ on:
   push:
     branches:
       - main
+  # Allow manual triggering for testing
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   test:
@@ -80,3 +85,25 @@ jobs:
 
       - name: Run PHPStan
         run: ./vendor/bin/phpstan analyse --memory-limit=512M
+
+  # Validate conventional commits on PR titles
+  validate-commits:
+    runs-on: ubuntu-latest
+    name: Commit Message Format
+    
+    steps:
+      - name: Get PR title
+        if: github.event_name == 'pull_request'
+        run: |
+          echo "PR_TITLE=${{ github.event.pull_request.title }}" >> $GITHUB_ENV
+      
+      - name: Check commit format
+        run: |
+          # Install conventional-changelog-cli
+          npm install -g conventional-changelog-cli @commitlint/cli @commitlint/config-conventional
+          
+          # For PRs, validate the title
+          if [ -n "${{ github.event.pull_request.title }}" ]; then
+            echo "Validating: ${{ github.event.pull_request.title }}"
+            echo "${{ github.event.pull_request.title }}" | commitlint || echo "Warning: Commit message doesn't follow conventional commits format"
+          fi
