@@ -32,6 +32,6 @@ jobs:
           curl -X POST "https://packagist.org/api/update-package" \
             -H "Content-Type: application/json" \
             -H "Accept: application/json" \
-            -u "$PACKAGIST_USERNAME:$PACKAGIST_API_TOKEN" \
+            -H "Authorization: Bearer $PACKAGIST_USERNAME:$PACKAGIST_API_TOKEN" \
             -d '{"repository":"https://github.com/uncoverthefuture-org/modular-monlith-laravel"}' \
             --fail-with-body
