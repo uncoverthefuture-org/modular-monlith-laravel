@@ -31,6 +31,13 @@ use App\Http\Controllers\EmailVerificationController;
 Route::moduleResource('email-verifications', EmailVerificationController::class);
 ```
 
+This automatically creates:
+- `POST /email-verifications` → create
+- `GET /email-verifications` → query
+- `GET /email-verifications/{id}` → read
+- `PATCH /email-verifications/{id}` → update
+- `DELETE /email-verifications/{id}` → delete
+
 ## Generated Files
 
 ### Controller

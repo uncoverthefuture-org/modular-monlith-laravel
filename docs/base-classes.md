@@ -73,7 +73,6 @@ Model lifecycle events:
 - `updated`
 - `deleted`
 - `retrieved`
-- etc.
 
 Register in service provider:
 
