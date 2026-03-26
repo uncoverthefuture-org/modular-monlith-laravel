@@ -40,7 +40,7 @@ jobs:
           coverage: none
 
       - name: Install PHP dependencies
-        run: composer install --no-interaction --prefer-dist
+        run: composer update --no-interaction --prefer-dist
 
       - name: Run tests
         run: ./vendor/bin/pest --colors=always || ./vendor/bin/phpunit --colors=always
@@ -60,7 +60,7 @@ jobs:
           extensions: mbstring, xml, ctype, json, zip, gd
 
       - name: Install PHP dependencies
-        run: composer install --no-interaction --prefer-dist
+        run: composer update --no-interaction --prefer-dist
 
       - name: Run PHPCS
         run: ./vendor/bin/php-cs-fixer fix --diff --dry-run --stop-on-violation || true
@@ -80,7 +80,7 @@ jobs:
           extensions: mbstring, xml, ctype, json, zip, gd
 
       - name: Install PHP dependencies
-        run: composer install --no-interaction --prefer-dist
+        run: composer update --no-interaction --prefer-dist
 
       - name: Run PHPStan
         run: ./vendor/bin/phpstan analyse --memory-limit=512M || true
