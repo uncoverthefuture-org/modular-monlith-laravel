@@ -4,6 +4,12 @@ on:
   pull_request:
     branches:
       - main
+    paths:
+      - 'src/**'
+      - 'tests/**'
+      - 'composer.json'
+      - 'phpunit.xml'
+      - 'Pest.php'
   workflow_dispatch:
 
 permissions:
