@@ -2,12 +2,11 @@
 
 use PHPUnit\Framework\TestCase;
 use Illuminate\Container\Container;
-use Illuminate\Filesystem\Filesystem;
 
 uses(TestCase::class);
 
 beforeEach(function () {
-    // Bind app to container
+    // Bind app to container if not already bound
     if (!app()->bound('app')) {
         $app = new Container();
         Container::setInstance($app);
@@ -22,7 +21,7 @@ beforeEach(function () {
                     'middleware' => base_path('app/Http/Middleware'),
                     'service' => base_path('app/Services'),
                     'observer' => base_path('app/Observers'),
-                    'migration' => base_path('database/migrations'),
+                    'migration' => database_path('migrations'),
                 ],
                 'namespaces' => [
                     'controller' => 'App\\Http\\Controllers',
@@ -49,30 +48,3 @@ beforeEach(function () {
         ]));
     }
 });
-
-function base_path(string $path = ''): string
-{
-    return dirname(__DIR__) . ($path ? '/' . $path : '');
-}
-
-function app(string $abstract = null)
-{
-    $container = Container::getInstance();
-    
-    if ($abstract === null) {
-        return $container;
-    }
-    
-    return $container->make($abstract);
-}
-
-function config(string $key = null, $default = null)
-{
-    $config = app()->make('config');
-    
-    if ($key === null) {
-        return $config;
-    }
-    
-    return $config->get($key, $default);
-}

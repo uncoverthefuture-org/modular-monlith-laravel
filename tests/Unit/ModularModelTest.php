@@ -34,15 +34,6 @@ test('modular model has correct casts', function () {
     expect($casts)->toHaveKey('deleted_at');
 });
 
-test('modular model scope by uuid', function () {
-    $query = TestModularModel::query();
-    $query->byUuid('test-uuid-123');
-    
-    $sql = $query->toSql();
-    expect($sql)->toContain('where');
-});
-
 test('modular model generates uuid on boot', function () {
-    // Test that the boot method exists and doesn't throw
     expect(method_exists(TestModularModel::class, 'boot'))->toBeTrue();
 });

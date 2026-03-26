@@ -3,7 +3,9 @@
 .env
 .env.backup
 .phpunit.result.cache
+.phpunit.cache/
 composer.phar
+composer.lock
 package-lock.json
 yarn.lock
 *.swp
