@@ -5,6 +5,16 @@ All notable changes to this package will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.1](https://github.com/uncoverthefuture-org/modular-monlith-laravel/compare/v1.2.0...v1.2.1) (2026-03-26)
+
+
+### Bug Fixes
+
+* enable GitHub Pages automatically in deployment workflow ([607c751](https://github.com/uncoverthefuture-org/modular-monlith-laravel/commit/607c7510fa354fbd6e66fea7959d3357f9e2321c))
+* enable GitHub Pages via configure-pages action ([4cf5b99](https://github.com/uncoverthefuture-org/modular-monlith-laravel/commit/4cf5b990548341a574408396ad873113b2eb9f6c))
+* move permissions inside job for proper scoping ([c6a960e](https://github.com/uncoverthefuture-org/modular-monlith-laravel/commit/c6a960e83d713c17ce2f869d1b77ae1085dbb6d1))
+* scope permissions correctly for GitHub Pages deployment ([4b78b50](https://github.com/uncoverthefuture-org/modular-monlith-laravel/commit/4b78b505700138218e76b857f7c150c63a81a3ff))
+
 ## [1.2.0](https://github.com/uncoverthefuture-org/modular-monlith-laravel/compare/v1.1.3...v1.2.0) (2026-03-26)
 
 
