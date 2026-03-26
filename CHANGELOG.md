@@ -5,6 +5,14 @@ All notable changes to this package will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.3](https://github.com/uncoverthefuture-org/modular-monlith-laravel/compare/v1.1.2...v1.1.3) (2026-03-26)
+
+
+### Bug Fixes
+
+* use Bearer token auth for Packagist API ([9f0218c](https://github.com/uncoverthefuture-org/modular-monlith-laravel/commit/9f0218cabec44244fa91e43c2307ea43b1e7472f))
+* use Bearer token auth for Packagist API ([a0df690](https://github.com/uncoverthefuture-org/modular-monlith-laravel/commit/a0df6902b8e1b8e6b5281d50ed261ee9862c857c))
+
 ## [1.1.2](https://github.com/uncoverthefuture-org/modular-monlith-laravel/compare/v1.1.1...v1.1.2) (2026-03-26)
 
 
