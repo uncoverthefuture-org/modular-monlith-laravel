@@ -5,6 +5,20 @@ All notable changes to this package will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 1.0.0 (2026-03-26)
+
+
+### Bug Fixes
+
+* remove composer.lock and add platform config ([6852105](https://github.com/uncoverthefuture-org/modular-monlith-laravel/commit/6852105eedea41b6ccd80ecb9a5bbbb473c7ccfe))
+* resolve test suite and composer issues ([b0b4615](https://github.com/uncoverthefuture-org/modular-monlith-laravel/commit/b0b4615684e178d39253e30c123cfb4ac599e2b6))
+* resolve test suite and composer issues ([cc3cf05](https://github.com/uncoverthefuture-org/modular-monlith-laravel/commit/cc3cf05a5bd633094ba4709d15167de31b4fb1e9))
+* update release-please action and disable main branch tests ([4b25ce2](https://github.com/uncoverthefuture-org/modular-monlith-laravel/commit/4b25ce2f1df92b0d858e2814197eff40049abc2a))
+* update release-please action and disable main branch tests ([7043fb3](https://github.com/uncoverthefuture-org/modular-monlith-laravel/commit/7043fb3c96e9badc92ba4ce6a6a76d3d189bb357))
+* update workflow to use shivammathur/setup-php v2 ([9615ec2](https://github.com/uncoverthefuture-org/modular-monlith-laravel/commit/9615ec21103f26c3710426c7f96b4dd5a9dc1d2a))
+* use composer update for CI compatibility ([4ad810b](https://github.com/uncoverthefuture-org/modular-monlith-laravel/commit/4ad810bdec80dac8357c80e7d4c58b365b1987e2))
+* use PHP 8.2+ for Pest v2 compatibility ([0957ecd](https://github.com/uncoverthefuture-org/modular-monlith-laravel/commit/0957ecdd089f1c1b1dd0b436f9449a077364ba86))
+
 ## [Unreleased]
 
 ## [1.0.0] - YYYY-MM-DD

@@ -3,7 +3,12 @@
     "description": "Modular monolith architecture scaffolding for Laravel",
     "type": "library",
     "license": "MIT",
-    "keywords": ["laravel", "modular", "monolith", "scaffolding"],
+    "keywords": [
+        "laravel",
+        "modular",
+        "monolith",
+        "scaffolding"
+    ],
     "authors": [
         {
             "name": "Uncover",
