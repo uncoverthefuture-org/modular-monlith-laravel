@@ -24,6 +24,9 @@
         "friendsofphp/php-cs-fixer": "^3.0",
         "phpstan/phpstan": "^1.0"
     },
+    "platform": {
+        "php": "8.2.30"
+    },
     "autoload": {
         "psr-4": {
             "Uncover\\ModularMonolith\\": "src/"
