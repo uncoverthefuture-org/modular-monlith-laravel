@@ -1,0 +1,32 @@
+name: Update Packagist
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+jobs:
+  update-packagist:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Get Packagist credentials from Infisical
+        uses: Infisical/secrets-action@v1
+        with:
+          method: universal
+          client-id: ${{ secrets.INFISICAL_CLIENT_ID }}
+          client-secret: ${{ secrets.INFISICAL_CLIENT_SECRET }}
+          secrets: |
+            PACKAGIST_API_TOKEN
+            PACKAGIST_USERNAME
+
+      - name: Trigger Packagist Update
+        run: |
+          curl -X POST "https://packagist.org/api/update-package" \
+            -H "Accept: application/json" \
+            -u "${{ env.PACKAGIST_USERNAME }}:${{ env.PACKAGIST_API_TOKEN }}" \
+            -d "repository=https://github.com/uncoverthefuture-org/modular-monlith-laravel"
+        env:
+          CURL_OPTS: "-f --show-error"
