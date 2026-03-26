@@ -1,13 +1,19 @@
 name: Update Packagist
 
 on:
-  release:
-    types: [published]
+  pull_request:
+    types: [closed]
+    branches:
+      - main
   workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   update-packagist:
     runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch' || (github.event.pull_request.merged == true && startsWith(github.event.pull_request.head.ref, 'release-please--'))
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -20,13 +26,11 @@ jobs:
           client-secret: ${{ secrets.INFISICAL_CLIENT_SECRET }}
           project-slug: ${{ vars.INFISICAL_PROJECT_SLUG }}
           env-slug: ${{ vars.INFISICAL_ENVIRONMENT_SLUG }}
-          secrets: |
-            PACKAGIST_API_TOKEN
-            PACKAGIST_USERNAME
 
       - name: Trigger Packagist Update
         run: |
           curl -X POST "https://packagist.org/api/update-package" \
+            -H "Content-Type: application/json" \
             -H "Accept: application/json" \
             -u "${{ env.PACKAGIST_USERNAME }}:${{ env.PACKAGIST_API_TOKEN }}" \
-            -d "repository=https://github.com/uncoverthefuture-org/modular-monlith-laravel"
+            -d '{"repository":"https://github.com/uncoverthefuture-org/modular-monlith-laravel"}'
