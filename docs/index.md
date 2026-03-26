@@ -1,38 +1,50 @@
-# Introduction
+# Laravel Modular Monolith Package
 
-Welcome to the Laravel Modular Monolith Package documentation.
+<p align="center">
+  <a href="https://packagist.org/packages/uncover/modular-monolith-laravel">
+    <img src="https://img.shields.io/packagist/v/uncover/modular-monolith-laravel.svg" alt="Latest Version">
+  </a>
+  <a href="https://packagist.org/packages/uncover/modular-monolith-laravel">
+    <img src="https://img.shields.io/packagist/dt/uncover/modular-monolith-laravel.svg" alt="Total Downloads">
+  </a>
+  <a href="https://github.com/uncoverthefuture-org/modular-monlith-laravel/actions">
+    <img src="https://github.com/uncoverthefuture-org/modular-monlith-laravel/actions/workflows/tests.yml/badge.svg" alt="Tests">
+  </a>
+</p>
 
-This package provides scaffolding for building modular monolith Laravel applications with standardized CRUD patterns, UUID support, and automatic route registration.
+A Laravel package that provides scaffolding for building modular monolith applications with standardized CRUD patterns, UUID support, and automatic route registration.
 
-## Installation
+## Features
 
-```bash
-composer require uncover/modular-monolith-laravel
-```
+- **One Command Module Generation** - Generate Controller, Model, Validation, Middleware, Service, and Observer with a single artisan command
+- **Base Classes with Full CRUD** - Pre-built base classes with complete CRUD operations
+- **Route Macro** - `Route::moduleResource()` for automatic REST endpoint registration
+- **UUID Support** - Automatic UUID generation and handling
+- **Batch Operations** - Built-in support for batch create and delete
+- **Flexible Validation** - Per-action validation rules
+- **Service Layer** - Base service with caching and query methods
+- **Observers** - Base observer for model lifecycle events
+
+## Requirements
+
+- PHP 8.2+
+- Laravel 9.0, 10.0, or 11.0
 
 ## Quick Start
 
-### Generate a Module
-
 ```bash
-# Generate controller and model (default)
+# Install the package
+composer require uncover/modular-monolith-laravel
+
+# Generate a module
 php artisan modular:make EmailVerification
 
-# Generate all components
-php artisan modular:make EmailVerification --all
-```
-
-### Add Routes
-
-```php
-use App\Http\Controllers\EmailVerificationController;
-
+# Add routes
 Route::moduleResource('email-verifications', EmailVerificationController::class);
 ```
 
-This automatically creates:
-- `POST /email-verifications` → create
-- `GET /email-verifications` → query
-- `GET /email-verifications/{id}` → read
-- `PATCH /email-verifications/{id}` → update
-- `DELETE /email-verifications/{id}` → delete
+That's it! Your CRUD endpoints are ready.
+
+## License
+
+The MIT License (MIT). See [License File](https://github.com/uncoverthefuture-org/modular-monlith-laravel/blob/main/LICENSE) for more information.

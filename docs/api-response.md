@@ -6,12 +6,12 @@
 
 ```json
 {
-    "status": "success",
-    "message": "Record created",
-    "data": {
-        "uuid": "...",
-        "email": "test@example.com"
-    }
+  "status": "success",
+  "message": "Record created",
+  "data": {
+    "uuid": "...",
+    "email": "test@example.com"
+  }
 }
 ```
 
@@ -19,18 +19,18 @@
 
 ```json
 {
-    "status": "success",
-    "message": "Success",
-    "data": [
-        { "uuid": "...", "email": "test1@example.com" },
-        { "uuid": "...", "email": "test2@example.com" }
-    ],
-    "pagination": {
-        "current_page": 1,
-        "last_page": 5,
-        "per_page": 15,
-        "total": 73
-    }
+  "status": "success",
+  "message": "Success",
+  "data": [
+    { "uuid": "...", "email": "test1@example.com" },
+    { "uuid": "...", "email": "test2@example.com" }
+  ],
+  "pagination": {
+    "current_page": 1,
+    "last_page": 5,
+    "per_page": 15,
+    "total": 73
+  }
 }
 ```
 
@@ -40,11 +40,11 @@
 
 ```json
 {
-    "status": "error",
-    "message": "Validation failed",
-    "errors": {
-        "email": ["The email field is required."]
-    }
+  "status": "error",
+  "message": "Validation failed",
+  "errors": {
+    "email": ["The email field is required."]
+  }
 }
 ```
 
@@ -52,7 +52,7 @@
 
 ```json
 {
-    "status": "error",
-    "message": "Record not found"
+  "status": "error",
+  "message": "Record not found"
 }
 ```
