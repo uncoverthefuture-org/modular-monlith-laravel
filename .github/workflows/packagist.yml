@@ -5,6 +5,7 @@ on:
     types: [closed]
     branches:
       - main
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -12,7 +13,7 @@ permissions:
 jobs:
   update-packagist:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true && startsWith(github.event.pull_request.head.ref, 'release-please--')
+    if: github.event_name == 'workflow_dispatch' || (github.event.pull_request.merged == true && startsWith(github.event.pull_request.head.ref, 'release-please--'))
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -25,9 +26,6 @@ jobs:
           client-secret: ${{ secrets.INFISICAL_CLIENT_SECRET }}
           project-slug: ${{ vars.INFISICAL_PROJECT_SLUG }}
           env-slug: ${{ vars.INFISICAL_ENVIRONMENT_SLUG }}
-          secrets: |
-            PACKAGIST_API_TOKEN
-            PACKAGIST_USERNAME
 
       - name: Trigger Packagist Update
         run: |
