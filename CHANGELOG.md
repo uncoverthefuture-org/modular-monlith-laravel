@@ -5,6 +5,14 @@ All notable changes to this package will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.0](https://github.com/uncoverthefuture-org/modular-monlith-laravel/compare/v1.2.1...v1.3.0) (2026-03-26)
+
+
+### Features
+
+* migrate to VitePress documentation ([9918c16](https://github.com/uncoverthefuture-org/modular-monlith-laravel/commit/9918c163be5de7aa444d0fd634af0d9d63110167))
+* migrate to VitePress documentation ([0ed24fb](https://github.com/uncoverthefuture-org/modular-monlith-laravel/commit/0ed24fba9cd84281d903a5d6d6584981ec1743a9))
+
 ## [1.2.1](https://github.com/uncoverthefuture-org/modular-monlith-laravel/compare/v1.2.0...v1.2.1) (2026-03-26)
 
 
