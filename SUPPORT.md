@@ -2,8 +2,10 @@
 
 ## Getting Help
 
-- **GitHub Issues**: Report bugs at https://github.com/uncoverthefuture-org/modular-monlith-laravel/issues
-- **GitHub Discussions**: Ask questions at https://github.com/uncoverthefuture-org/modular-monlith-laravel/discussions
+If you need help with this package, you can:
+
+- **GitHub Issues**: Report bugs and request features at https://github.com/uncoverthefuture-org/modular-monlith-laravel/issues
+- **GitHub Discussions**: Ask questions and share ideas at https://github.com/uncoverthefuture-org/modular-monlith-laravel/discussions
 
 ## Resources
 
@@ -13,4 +15,4 @@
 
 ## Maintaining
 
-This package is maintained by [Uncover](https://uncoverthefuture.org). For security issues, email hello.woop@uncoverthefuture.org.
+This package is maintained by [Uncover](https://uncoverthefuture.org). For security issues, please email hello.woop@uncoverthefuture.org.
