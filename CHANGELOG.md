@@ -5,6 +5,14 @@ All notable changes to this package will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.0](https://github.com/uncoverthefuture-org/modular-monlith-laravel/compare/v1.3.0...v1.4.0) (2026-03-27)
+
+
+### Features
+
+* **docs:** migrate to uncover-docs shell with customizable title and favicon ([3932653](https://github.com/uncoverthefuture-org/modular-monlith-laravel/commit/3932653b28d19cd5bfc432fb9768130fa985a35a))
+* **docs:** migrate to uncover-docs shell with customizable title and favicon ([5eaf88b](https://github.com/uncoverthefuture-org/modular-monlith-laravel/commit/5eaf88bea66e6cafd3e4c1bc828b5e407465b7ed))
+
 ## [1.3.0](https://github.com/uncoverthefuture-org/modular-monlith-laravel/compare/v1.2.1...v1.3.0) (2026-03-26)
 
 
