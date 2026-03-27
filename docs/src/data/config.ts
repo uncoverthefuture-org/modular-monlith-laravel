@@ -5,18 +5,29 @@ import configDoc from "./configuration.md?raw";
 import baseClassesDoc from "./base-classes.md?raw";
 import apiResponseDoc from "./api-response.md?raw";
 
-export const UI_CONFIG = {
+export interface UIConfig {
+  siteTitle?: string;
+  favicon?: string;
+  sidebarFrameUrl?: string;
+  docContentFrameUrl?: string;
+  defaultTheme?: "light" | "dark";
+  showMobileMenu?: boolean;
+}
+
+export const UI_CONFIG: UIConfig = {
   siteTitle: "Modular Monolith Laravel",
   favicon: "/uncoverthefuture.svg",
   sidebarFrameUrl: "frames/sidebar",
   docContentFrameUrl: "frames/doc_content",
-  defaultTheme: "dark" as "light" | "dark",
+  defaultTheme: "dark",
+  showMobileMenu: true,
 };
 
 export interface NavItem {
     label: string;
     route?: string;
     children?: NavItem[];
+    external?: string;
 }
 
 export const navItems: NavItem[] = [
@@ -51,6 +62,19 @@ export const navItems: NavItem[] = [
             {
                 label: "API Response",
                 route: "/api-response"
+            },
+        ],
+    },
+    {
+        label: "About",
+        children: [
+            {
+                label: "Uncover Actions",
+                external: "https://uncoverthefuture-org.github.io/uactions/",
+            },
+            {
+                label: "GitHub Repository",
+                external: "https://github.com/uncoverthefuture-org/modular-monlith-laravel",
             },
         ],
     },
