@@ -5,6 +5,14 @@ All notable changes to this package will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.1](https://github.com/uncoverthefuture-org/modular-monlith-laravel/compare/v1.4.0...v1.4.1) (2026-03-27)
+
+
+### Bug Fixes
+
+* **docs:** add UIConfig interface for TypeScript support ([cdf457a](https://github.com/uncoverthefuture-org/modular-monlith-laravel/commit/cdf457a06030b4b3a4addc9ba7472af5242c2277))
+* **docs:** add UIConfig interface for TypeScript support ([4289ce9](https://github.com/uncoverthefuture-org/modular-monlith-laravel/commit/4289ce92d5849ba55cf82e9c810926947cccfbf7))
+
 ## [1.4.0](https://github.com/uncoverthefuture-org/modular-monlith-laravel/compare/v1.3.0...v1.4.0) (2026-03-27)
 
 
